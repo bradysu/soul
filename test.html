@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+	<title>Soul</title>
+		  
+
+	<script>
+		$(window).load(function() {
+			console.log('loading')
+			$('#test').on('change keyup paste', function(){
+			console.log('change')
+			$('#doneButton').css({backgroundColor: 'yellow'})
+		})
+		})
+		console.log($('#bla').val())
+
+		$('#doneButton').css({backgroundColor: 'yellow'})
+
+		console.log($('#test').val())
+
+		
+	</script>
+
+	
+</head>
+<body>
+	
+	<input id='test' value='test input'>
+	<button id='doneButton'>done</button>
+	<p id='bla'>blablabla</p>
+</body>
+</html>

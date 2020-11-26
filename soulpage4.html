@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
-<link rel="stylesheet" href='css/bootstrap.min.css'>
+<head>
+	<link rel="stylesheet" href='css/bootstrap.min.css'>
 	<script src='js/jquery-2.2.4.min.js'></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
-<title>Soul</title>
 
-<script type='text/javascript' src='Bmob.js'></script>
+	<title>Soul</title>
+<!-- 	<style>
+    	input:focus, textarea:focus, select:focus{
+        	outline: none;
+    	}
+	</style> -->
+
+	<script type='text/javascript' src='Bmob.js'></script>
 
 	<style>
 		.button {
@@ -32,7 +36,6 @@
 	  display: flex;
 	  justify-content: center;
 	  padding-top: 100px;
-	  width:800px;
 	}
 	.center_text {
 		text-align: center;
@@ -71,7 +74,7 @@
 		}
 		// end change password
 
-		var jumptopage3 = function(){
+		var done = function(){
 			location.href = 'soulpage3.html';
 		}
 
@@ -102,27 +105,35 @@
 		// end timer part
 		
 	</script>
+</head>
 <body>
-
-<div class="w3-container">
 	<div >
-		<img src="spage2.png" style="display: block;width: 800px;" >
-		<div style="padding-left: 55px; width:800px">
-			<div style="margin: 0 auto; width: 800px;">
-				<div style="display: flex;justify-content: center;margin: 0 auto;width: 100%;">
+		<img src="sopage4.png" style="display: block;margin-left: auto;margin-right: auto;width: 30%;" >
+		<div style="padding-left: 55px;">
+			<!-- <div class="dropdown"  style="margin-left: auto;margin-right: auto;width: 29%;"> -->
+
+				<!-- <input id='oldpassword' type="password" name="phonenumber" placeholder="在这里输入旧密码" style="border: none;outline: none; width: 70%; padding-top: 5px"> -->
+			<div style="margin: 0 auto;width: 25%;">
+				<div style="margin: 0 auto;width: 100%; margin-top: 3px">
 					<input class="digit_input" type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
 			      	<input class="digit_input" type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
 			      	<input class="digit_input" type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
 			      	<input class="digit_input" type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
 				</div>
 			</div>
-
+			<div style="margin: 0 auto;width: 17%; color: #bfbfbe; margin-top: 5px; font-size: 13px">
+				已发送验证码至18938685872
+			</div>
 			<!-- </div> -->
 		</div>
 	</div>
 	<div class="center">
 		<button id='doneButton' class="button button1" onclick='jumptopage3()'>重新发送</button>
 	</div>
-
+<!-- 	<style>
+		div {text-align: center;}
+	</style> -->
+	</div>
+	
 </body>
 </html>

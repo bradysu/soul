@@ -12,23 +12,7 @@
     	}
 	</style> -->
 
-	<script type='text/javascript' src='Bmob.js'></script>
-	<script type="text/javascript">
-		Bmob.initialize("bde34fd9420157cc", "123456")
-		
-		var done = function() {
-			var oldp = $('#oldpassword').val()
-			console.log(oldp)
-
-			const query = Bmob.Query('tableName');
-			query.set("oldPassword", oldp)
-			query.save().then(res => {
-			  console.log(res)
-			}).catch(err => {
-			  console.log(err)
-			})
-		}
-	</script>
+	
 
 	<style>
 		.button {
@@ -55,17 +39,17 @@
 	}
 	.center_text {
 		text-align: center;
-		padding-top: 200px;
+		padding-top: 250px;
 	}
 	</style>
 
 	<script type="text/javascript">
-		var jumptopage3 = function(){
-			location.href = 'soulpage3.html';
+		var jumptopage2 = function(){
+			location.href = 'soulpage2.html';
 		}
 
 		$(window).load(function() {
-			$('#oldpassword').on('change keyup paste', function(){
+			$('#phoneId').on('change keyup paste', function(){
 				console.log('change')
 				$('#doneButton').css({backgroundColor: '#00D7D3'})
 			})
@@ -73,23 +57,31 @@
 
 		
 	</script>
+
+	
 </head>
 <body>
 	<div >
-		<img src="spage2.png" style="display: block;margin-left: auto;margin-right: auto;width: 30%;" >
+		<img src="spage1.png" style="display: block;margin-left: auto;margin-right: auto;width: 30%;" >
 		<div style="padding-left: 55px;">
-			<div class="dropdown"  style="margin-left: auto;margin-right: auto;width: 29%;">
+			<div class="dropdown"  style="margin-left: auto;margin-right: auto;width: 31%;">
+		  		<button class="btn btn-light dropdown-toggle" type="button" style="background-color:white; border: none;">
+		    	+86</button>
 
-				<input id='oldpassword' type="password" name="phonenumber" placeholder="在这里输入旧密码" style="border: none;outline: none; width: 70%; padding-top: 5px">
+				<input id='phoneId' placeholder="在这里输入手机号" style="border: none;outline: none; width: 70%">
 			</div>
 
 			
 			
 		</div>
-		<hr style="width:350px; margin: auto; margin-top: 10px" />
+		<hr style="width:350px; margin: auto; margin-top: 5px" />
 	</div>
 	<div class="center">
-		<button id='doneButton' class="button button1" onclick='jumptopage3()'>确定</button>
+		<button id='doneButton' class="button button1" onclick="jumptopage2()">确定</button>
+	</div>
+
+	<div class="center_text">
+		登陆注册即表示同意<span style="color: #00D7D3">Soul用户协议</span>和<span style="color: #00D7D3">Soul用户协议</span>
 	</div>
 <!-- 	<style>
 		div {text-align: center;}
